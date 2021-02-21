@@ -1,0 +1,295 @@
+{
+  "title": "Nobix Layout",
+  "rules": [
+    {
+      "description": "E to D",
+      "manipulators":[
+        {
+					"type": "basic",
+					"from": {
+            "key_code": "e",
+						"modifiers":{
+							"optional": [
+								"shift",
+								"caps_lock"
+							]
+						}
+    			},
+    			"to":[
+						{"key_code": "d"}
+					]
+				},
+        {
+					"type": "basic",
+					"from": {
+            "key_code": "t",
+						"modifiers":{
+							"optional": [
+								"shift",
+								"caps_lock"
+							]
+						}
+    			},
+    			"to":[
+						{"key_code": "g"}
+					]
+				},
+        {
+					"type": "basic",
+					"from": {
+            "key_code": "y",
+						"modifiers":{
+							"optional": [
+								"shift",
+								"caps_lock"
+							]
+						}
+    			},
+    			"to":[
+						{"key_code": "j"}
+					]
+				},
+        {
+					"type": "basic",
+					"from": {
+            "key_code": "o",
+						"modifiers":{
+							"optional": [
+								"shift",
+								"caps_lock"
+							]
+						}
+    			},
+    			"to":[
+						{"key_code": "v"}
+					]
+				},
+				{
+					"type": "basic",
+					"from": {
+            "key_code": "open-blacket",
+						"modifiers":{
+							"optional": [
+								"shift",
+								"caps_lock"
+							]
+						}
+    			},
+    			"to":[
+						{"key_code": "quote"}
+					]
+				},
+        {
+					"type": "basic",
+					"from": {
+            "key_code": "a",
+						"modifiers":{
+							"optional": [
+								"shift",
+								"caps_lock"
+							]
+						}
+    			},
+    			"to":[
+						{"key_code": "k"}
+					]
+				},
+        {
+					"type": "basic",
+					"from": {
+            "key_code": "d",
+						"modifiers":{
+							"optional": [
+								"shift",
+								"caps_lock"
+							]
+						}
+    			},
+    			"to":[
+						{"key_code": "t"}
+					]
+				},
+        {
+					"type": "basic",
+					"from": {
+            "key_code": "f",
+						"modifiers":{
+							"optional": [
+								"shift",
+								"caps_lock"
+							]
+						}
+    			},
+    			"to":[
+						{"key_code": "n"}
+					]
+				},
+        {
+					"type": "basic",
+					"from": {
+            "key_code": "g",
+						"modifiers":{
+							"optional": [
+								"shift",
+								"caps_lock"
+							]
+						}
+    			},
+    			"to":[
+						{"key_code": "m"}
+					]
+				},
+        {
+					"type": "basic",
+					"from": {
+            "key_code": "h",
+						"modifiers":{
+							"optional": [
+								"shift",
+								"caps_lock"
+							]
+						}
+    			},
+    			"to":[
+						{"key_code": "l"}
+					]
+				},
+        {
+					"type": "basic",
+					"from": {
+            "key_code": "h",
+						"modifiers":{
+							"optional": [
+								"shift",
+								"caps_lock"
+							]
+						}
+    			},
+    			"to":[
+						{"key_code": "l"}
+					]
+				},
+				{
+					"type": "basic",
+					"from": {
+            "key_code": "j",
+						"modifiers":{
+							"optional": [
+								"shift",
+								"caps_lock"
+							]
+						}
+    			},
+    			"to":[
+						{"key_code": "a"}
+					]
+				},
+				{
+					"type": "basic",
+					"from": {
+            "key_code": "k",
+						"modifiers":{
+							"optional": [
+								"shift",
+								"caps_lock"
+							]
+						}
+    			},
+    			"to":[
+						{"key_code": "e"}
+					]
+				},
+				{
+					"type": "basic",
+					"from": {
+            "key_code": "l",
+						"modifiers":{
+							"optional": [
+								"shift",
+								"caps_lock"
+							]
+						}
+    			},
+    			"to":[
+						{"key_code": "o"}
+					]
+				},
+				{
+					"type": "basic",
+					"from": {
+            "key_code": "semicolon",
+						"modifiers":{
+							"optional": [
+								"shift",
+								"caps_lock"
+							]
+						}
+    			},
+    			"to":[
+						{"key_code": "y"}
+					]
+				},
+				{
+					"type": "basic",
+					"from": {
+            "key_code": "quote",
+						"modifiers":{
+							"optional": [
+								"shift",
+								"caps_lock"
+							]
+						}
+    			},
+    			"to":[
+						{"key_code": "semicolon"}
+					]
+				},
+				{
+					"type": "basic",
+					"from": {
+            "key_code": "v",
+						"modifiers":{
+							"optional": [
+								"shift",
+								"caps_lock"
+							]
+						}
+    			},
+    			"to":[
+						{"key_code": "h"}
+					]
+				},
+				{
+					"type": "basic",
+					"from": {
+            "key_code": "n",
+						"modifiers":{
+							"optional": [
+								"shift",
+								"caps_lock"
+							]
+						}
+    			},
+    			"to":[
+						{"key_code": "hyphen"}
+					]
+				},
+				{
+					"type": "basic",
+					"from": {
+            "key_code": "m",
+						"modifiers":{
+							"optional": [
+								"shift",
+								"caps_lock"
+							]
+						}
+    			},
+    			"to":[
+						{"key_code": "f"}
+					]
+				}
+			]
+    }
+	] 
+}

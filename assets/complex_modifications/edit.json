@@ -1,0 +1,14 @@
+{
+  "title":"Edit",
+  "rules":[
+    {
+      "description":"Ctrl + wcy to Cut Copy Paste"
+    },
+    {
+      "description":"Ctrl + q to Select All"
+    },
+    {
+      "description":"Ctrl + o to Open Line"
+    }
+  ]
+}
