@@ -2,8 +2,8 @@
   "title": "Nobix Layout",
   "rules": [
     {
-      "description": "E to D",
-      "manipulators":[
+      "description": " nobix layout original key",
+			"manipulators":[
         {
 					"type": "basic",
 					"from": {
