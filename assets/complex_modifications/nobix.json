@@ -2,7 +2,7 @@
   "title": "Nobix Layout",
   "rules": [
     {
-      "description": " nobix layout original key",
+      "description": "Nobix Layout",
 			"manipulators":[
         {
 					"type": "basic",
@@ -16,7 +16,7 @@
 						}
     			},
     			"to":[
-						{"key_code": "d"}
+						{"key_code": "t"}
 					]
 				},
         {
@@ -61,13 +61,28 @@
 						}
     			},
     			"to":[
-						{"key_code": "v"}
+						{"key_code": "p"}
+					]
+				},
+				{
+					"type":"basic",
+					"from":{
+						"key_code":"p",
+						"modifiers":{
+							"optional":[
+								"shift",
+								"caps_lock"
+							]
+						}
+					},
+					"to":[
+						{"key_code":"v"}
 					]
 				},
 				{
 					"type": "basic",
 					"from": {
-            "key_code": "open-blacket",
+            "key_code": "open_bracket",
 						"modifiers":{
 							"optional": [
 								"shift",
@@ -92,21 +107,6 @@
     			},
     			"to":[
 						{"key_code": "k"}
-					]
-				},
-        {
-					"type": "basic",
-					"from": {
-            "key_code": "d",
-						"modifiers":{
-							"optional": [
-								"shift",
-								"caps_lock"
-							]
-						}
-    			},
-    			"to":[
-						{"key_code": "t"}
 					]
 				},
         {
@@ -287,6 +287,101 @@
     			},
     			"to":[
 						{"key_code": "f"}
+					]
+				}
+			]
+		},
+		{
+			"description":"R_Command + C/V/B/N/M < to (/{/[/]/}/)",
+			"manipulators":[
+				{
+					"type":"basic",
+					"from":{
+						"key_code":"c",
+						"modifiers":{
+							"mandatory":["right_command"],
+							"optional":["caps_lock"]
+						}
+					},
+					"to":[
+						{
+							"key_code":"9",
+							"modifiers":"shift"
+						}
+					]
+				},
+				{
+					"type":"basic",
+					"from":{
+						"key_code":"v",
+						"modifiers":{
+							"mandatory":["right_command"],
+							"optional":["caps_lock"]
+						}
+					},
+					"to":[
+						{
+							"key_code":"open_bracket",
+							"modifiers":"shift"
+						}
+					]
+				},
+				{
+					"type":"basic",
+					"from":{
+						"key_code":"b",
+						"modifiers":{
+							"mandatory":["right_command"],
+							"optional":["caps_lock"]
+						}
+					},
+					"to":[
+						{"key_code":"open_bracket"}
+					]
+				},
+				{
+					"type":"basic",
+					"from":{
+						"key_code":"n",
+						"modifiers":{
+							"mandatory":["right_command"],
+							"optional":["caps_lock"]
+						}
+					},
+					"to":[
+						{"key_code":"close_bracket"}
+					]
+				},
+				{
+					"type":"basic",
+					"from":{
+						"key_code":"m",
+						"modifiers":{
+							"mandatory":["right_command"],
+							"optional" :["caps_lock"]
+						}
+					},
+					"to":[
+						{
+							"key_code":"close_bracket",
+							"modifiers":"shift"
+						}
+					]
+				},
+				{
+					"type":"basic",
+					"from":{
+						"key_code":"comma",
+						"modifiers":{
+							"mandatory":["right_command"],
+							"optional":["caps_lock"]
+						}
+					},
+					"to":[
+						{
+							"key_code":"0",
+							"modifiers":"shift"
+						}
 					]
 				}
 			]

@@ -2,13 +2,102 @@
   "title":"Edit",
   "rules":[
     {
-      "description":"Ctrl + wcy to Cut Copy Paste"
+      "description":"Ctrl + XCV to Cut/Copy/Paste",
+      "manipulators":[
+        {
+          "type":"basic",
+          "from":{
+            "key_code":"x",
+            "modifiers":{
+              "mandatory":["control"],
+              "optional":["caps_lock"]
+            }
+          },
+          "to":[
+            {
+              "key_code":"x",
+              "modifiers":["command"]
+            }
+          ]
+        },
+        {
+          "type":"basic",
+          "from":{
+            "key_code":"c",
+            "modifiers":{
+              "mandatory" :["control"],
+              "optional":["caps_lock"]
+            }
+          },
+          "to":[
+            {
+              "key_code":"c",
+              "modifiers":["command"]
+            }
+          ]
+        },
+        {
+          "type":"basic",
+          "from" :{
+            "key_code":"v",
+            "modifiers":{
+              "mandatory":["control"],
+              "optional":["caps_lock"]
+            }
+          },
+          "to":[
+            {
+            "key_code":"v",
+            "modifiers":["command"]
+            }
+          ]
+        }
+      ]
     },
     {
-      "description":"Ctrl + q to Select All"
+      "description":"Ctrl + Q to Select All",
+      "manipulators":[
+        {
+          "type":"basic",
+          "from":{
+            "key_code":"q",
+            "modifiers":{
+              "mandatory":["control"],
+              "optional":["caps_lock"]
+            }
+          },
+          "to":[
+            {
+              "key_code":"a",
+              "modifiers":["command"]
+            }
+          ]
+        }
+      ]
     },
     {
-      "description":"Ctrl + o to Open Line"
+      "description":"Ctrl + S to Right Delete",
+      "manipulators":[
+        {
+          "type":"basic",
+          "from":{
+            "key_code":"s",
+            "modifiers":{
+              "mandatory":["control"],
+              "optional":["caps_lock"]
+            }
+          },
+          "to":[
+            {
+              "key_code":"right_arrow",
+              "modifiers":["command","shift"]
+            },
+            {
+              "key_code":"delete_or_backspace"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

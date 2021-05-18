@@ -2,7 +2,7 @@
   "title":"Cursor Move",
   "rules":[
     {
-      "description":"Ctrl + JKL: to L/D/U/R",
+      "description":"Ctrl + J/K/L/: to L/D/U/R",
       "manipulators":[
         {
           "type":"basic",
@@ -12,7 +12,8 @@
               "mandatory":["control"],
               "optional":[
                 "shift",
-                "caps_lock"
+                "caps_lock",
+                "option"
               ]
             }
           },
@@ -64,20 +65,21 @@
               "mandatory": ["control"],
               "optional": [
                 "caps_lock",
-                "shift"
+                "shift",
+                "option"
               ]
             }
           },
           "to": [
             {
-              "key_code": "up_arrow"
+              "key_code": "right_arrow"
             }
           ]
         }
       ]
     },
     {
-      "description":"Ctrl + a e to Home/End",
+      "description":"Ctrl + A/E to Home/End",
       "manipulators":[
         {
           "type":"basic",
@@ -119,9 +121,8 @@
         }
       ]
     },
-
     {
-      "description":"Ctrl + r t to Down/Up",
+      "description":"Ctrl + R/T to Down/Up",
       "manipulators":[
         {
           "type":"basic",
@@ -150,14 +151,48 @@
           },
           "to":[
             {
-              "key_code":"t",
+              "key_code":"up_arrow",
               "modifiers":"fn"
             }
           ]
         }
       ]
+    },
+    {
+      "description":"Ctrl + H/T to BS/Delete",
+      "manipulators":[
+        {
+          "type":"basic",
+          "from":{
+            "key_code":"h",
+            "modifiers":{
+              "mandatory":["control"],
+              "optional":["caps_lock"]
+            }
+          },
+          "to":[
+            {
+              "key_code":"delete_or_backspace"
+            }
+          ]
+        },
+        {
+          "type":"basic",
+          "from":{
+            "key_code":"d",
+            "modifiers":{
+              "mandatory":["control"],
+              "optional":["caps_lock"]
+            }
+          },
+          "to":[
+            {
+              "key_code":"delete_or_backspace",
+              "modifirs":"fn"
+            }
+          ]
+        }
+      ]
     }
-    
   ]
 }
-      
