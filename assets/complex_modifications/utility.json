@@ -2,7 +2,7 @@
   "title":"new utillity",
   "rules":[
     {
-      "description":"Ctrl + z/b to Undo/Redo",
+      "description":"Ctrl + z / b to Undo/Redo",
       "manipulators":[
         {
           "type":"basic",
@@ -18,6 +18,22 @@
               "key_code":"z",
               "modifiers":"command"
             }
+          ]
+        },
+        {
+          "type":"basic",
+          "from":{
+            "key_code":"slash",
+            "modifiers":{
+              "mandatory":"control",
+              "optional":"caps_lock"
+            }
+          },
+          "to":[
+             {
+               "key_code":"z",
+               "modifiers":"command"
+             }
           ]
         },
         {
