@@ -55,12 +55,12 @@
       ]
     },
     {
-      "description":"Ctrl + Q to Select All",
+      "description":"Ctrl + r to Select All",
       "manipulators":[
         {
           "type":"basic",
           "from":{
-            "key_code":"q",
+            "key_code":"r",
             "modifiers":{
               "mandatory":["control"],
               "optional":["caps_lock"]
