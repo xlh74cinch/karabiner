@@ -267,11 +267,11 @@
                         ]
                     },
                     {
-                        "description": "Ctrl + A/E to Home/End",
+                        "description": "Ctrl + U/P to Home/End",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "a",
+                                    "key_code": "u",
                                     "modifiers": {
                                         "mandatory": [
                                             "control"
@@ -292,7 +292,7 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "e",
+                                    "key_code": "p",
                                     "modifiers": {
                                         "mandatory": [
                                             "control"
@@ -314,11 +314,11 @@
                         ]
                     },
                     {
-                        "description": "Ctrl + w/r to Down/Up",
+                        "description": "Ctrl + ,/. to Scroll Down/Up",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "w",
+                                    "key_code": "comma",
                                     "modifiers": {
                                         "mandatory": [
                                             "control"
@@ -338,7 +338,7 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "r",
+                                    "key_code": "period",
                                     "modifiers": {
                                         "mandatory": [
                                             "control"
@@ -860,11 +860,27 @@
                         ]
                     },
                     {
-                        "description": "Ctrl + z/b to Undo/Redo",
+                        "description": "Ctrl + //z/b to Undo/Redo",
                         "manipulators": [
                             {
                                 "from": {
                                     "key_code": "z",
+                                    "modifiers": {
+                                        "mandatory": "control",
+                                        "optional": "caps_lock"
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "z",
+                                        "modifiers": "command"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "slash",
                                     "modifiers": {
                                         "mandatory": "control",
                                         "optional": "caps_lock"
@@ -950,7 +966,7 @@
                         ]
                     },
                     {
-                        "description": "Ctrl + U/I to Retoggle/Toggle",
+                        "description": "Ctrl + O/I to Retoggle/Toggle",
                         "manipulators": [
                             {
                                 "from": {
@@ -969,7 +985,7 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "u",
+                                    "key_code": "o",
                                     "modifiers": {
                                         "mandatory": "control",
                                         "optional": "caps_lock"
@@ -986,11 +1002,11 @@
                         ]
                     },
                     {
-                        "description": "Ctrl + M/O to Return/Open Line",
+                        "description": "Ctrl + M/W to Return/Open Line",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "o",
+                                    "key_code": "w",
                                     "modifiers": {
                                         "mandatory": "control",
                                         "optional": "caps_lock"
@@ -1041,43 +1057,6 @@
                                 "to": [
                                     {
                                         "key_code": "escape"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Ctrl + , . to shift + left right",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "comma",
-                                    "modifiers": {
-                                        "mandatory": "control",
-                                        "optional": "caps_lock"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_arrow",
-                                        "modifiers": "shift"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "period",
-                                    "modifiers": {
-                                        "mandatory": "control",
-                                        "optional": "caps_lock"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "right_arrow",
-                                        "modifiers": "shift"
                                     }
                                 ],
                                 "type": "basic"
@@ -1172,7 +1151,7 @@
                         ]
                     },
                     {
-                        "description": "R_command + qwdrgjuivp to !@#$%^&*()",
+                        "description": "R_command + qwdrgjuivp to !@#$%^&*+-",
                         "manipulators": [
                             {
                                 "from": {
@@ -1357,7 +1336,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "9",
+                                        "key_code": "equol_sign",
                                         "modifiers": "shift"
                                     }
                                 ],
@@ -1378,8 +1357,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "0",
-                                        "modifiers": "shift"
+                                        "key_code": "hyphen"
                                     }
                                 ],
                                 "type": "basic"
@@ -1419,6 +1397,23 @@
                                 "to": [
                                     {
                                         "key_code": "v"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "o",
+                                    "modifiers": {
+                                        "optional": [
+                                            "shift",
+                                            "caps_lock"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "h"
                                     }
                                 ],
                                 "type": "basic"
@@ -1503,7 +1498,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "l"
+                                        "key_code": "f"
                                     }
                                 ],
                                 "type": "basic"
@@ -1520,7 +1515,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "l"
+                                        "key_code": "f"
                                     }
                                 ],
                                 "type": "basic"
@@ -1571,7 +1566,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "h"
+                                        "key_code": "o"
                                     }
                                 ],
                                 "type": "basic"
@@ -1656,7 +1651,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "f"
+                                        "key_code": "l"
                                     }
                                 ],
                                 "type": "basic"
@@ -1998,11 +1993,11 @@
                         ]
                     },
                     {
-                        "description": "Ctrl + A/E to Home/End",
+                        "description": "Ctrl + U/P to Home/End",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "a",
+                                    "key_code": "u",
                                     "modifiers": {
                                         "mandatory": [
                                             "control"
@@ -2023,7 +2018,7 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "e",
+                                    "key_code": "p",
                                     "modifiers": {
                                         "mandatory": [
                                             "control"
@@ -2045,11 +2040,11 @@
                         ]
                     },
                     {
-                        "description": "Ctrl + R/T to Down/Up",
+                        "description": "Ctrl + ,/. to Scroll Down/Up",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "r",
+                                    "key_code": "comma",
                                     "modifiers": {
                                         "mandatory": [
                                             "control"
@@ -2069,7 +2064,7 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "t",
+                                    "key_code": "period",
                                     "modifiers": {
                                         "mandatory": [
                                             "control"
@@ -2090,11 +2085,11 @@
                         ]
                     },
                     {
-                        "description": "Ctrl + WCY to Cut/Copy/Paste",
+                        "description": "Ctrl + xcv to Cut/Copy/Paste",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "w",
+                                    "key_code": "x",
                                     "modifiers": {
                                         "mandatory": [
                                             "control"
@@ -2138,7 +2133,7 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "y",
+                                    "key_code": "v",
                                     "modifiers": {
                                         "mandatory": [
                                             "control"
@@ -2161,11 +2156,11 @@
                         ]
                     },
                     {
-                        "description": "Ctrl + Q to Select All",
+                        "description": "Ctrl + A to Select All",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "q",
+                                    "key_code": "a",
                                     "modifiers": {
                                         "mandatory": [
                                             "control"
@@ -2269,7 +2264,7 @@
                         ]
                     },
                     {
-                        "description": "Ctrl + '/'/X to Undo/Redo",
+                        "description": "Ctrl + Z'/'/X to Undo/Redo",
                         "manipulators": [
                             {
                                 "from": {
@@ -2293,7 +2288,27 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "x",
+                                    "key_code": "z",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "control"
+                                        ],
+                                        "optional": [
+                                            "caps_lock"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "z",
+                                        "modifiers": "command"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "b",
                                     "modifiers": {
                                         "mandatory": "control",
                                         "optional": "caps_lock"
@@ -2313,7 +2328,7 @@
                         ]
                     },
                     {
-                        "description": "Ctrl + U/I to Retoggle/Toggle",
+                        "description": "Ctrl + O/I to Retoggle/Toggle",
                         "manipulators": [
                             {
                                 "from": {
@@ -2336,7 +2351,7 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "u",
+                                    "key_code": "o",
                                     "modifiers": {
                                         "mandatory": [
                                             "control"
@@ -2357,11 +2372,11 @@
                         ]
                     },
                     {
-                        "description": "Ctrl + M/O to Return/Open Line",
+                        "description": "Ctrl + M/W to Return/Open Line",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "o",
+                                    "key_code": "w",
                                     "modifiers": {
                                         "mandatory": [
                                             "control"
