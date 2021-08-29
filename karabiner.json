@@ -330,7 +330,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "down_arrow",
+                                        "key_code": "up_arrow",
                                         "modifiers": "fn"
                                     }
                                 ],
@@ -350,7 +350,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "up_arrow",
+                                        "key_code": "down_arrow",
                                         "modifiers": "fn"
                                     }
                                 ],
@@ -403,11 +403,11 @@
                         ]
                     },
                     {
-                        "description": "Ctrl + q to Select All",
+                        "description": "Ctrl + a to Select All",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "q",
+                                    "key_code": "a",
                                     "modifiers": {
                                         "mandatory": [
                                             "control"
@@ -1102,7 +1102,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "down_arrow"
+                                        "key_code": "up_arrow"
                                     }
                                 ],
                                 "type": "basic"
@@ -1122,7 +1122,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "up_arrow"
+                                        "key_code": "down_arrow"
                                     }
                                 ],
                                 "type": "basic"
@@ -1945,7 +1945,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "down_arrow"
+                                        "key_code": "up_arrow"
                                     }
                                 ],
                                 "type": "basic"
@@ -1965,7 +1965,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "up_arrow"
+                                        "key_code": "down_arrow"
                                     }
                                 ],
                                 "type": "basic"
@@ -2056,7 +2056,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "down_arrow",
+                                        "key_code": "up_arrow",
                                         "modifiers": "fn"
                                     }
                                 ],
@@ -2076,7 +2076,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "up_arrow",
+                                        "key_code": "down_arrow",
                                         "modifiers": "fn"
                                     }
                                 ],
