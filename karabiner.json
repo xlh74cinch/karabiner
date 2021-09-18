@@ -1379,7 +1379,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "t"
+                                        "key_code": "m"
                                     }
                                 ],
                                 "type": "basic"
@@ -1413,7 +1413,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "h"
+                                        "key_code": "d"
                                     }
                                 ],
                                 "type": "basic"
@@ -1471,6 +1471,23 @@
                             },
                             {
                                 "from": {
+                                    "key_code": "d",
+                                    "modifiers": {
+                                        "optional": [
+                                            "shift",
+                                            "caps_lock"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "t"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
                                     "key_code": "f",
                                     "modifiers": {
                                         "optional": [
@@ -1482,23 +1499,6 @@
                                 "to": [
                                     {
                                         "key_code": "n"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "h",
-                                    "modifiers": {
-                                        "optional": [
-                                            "shift",
-                                            "caps_lock"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "f"
                                     }
                                 ],
                                 "type": "basic"
@@ -1617,7 +1617,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "m"
+                                        "key_code": "h"
                                     }
                                 ],
                                 "type": "basic"
