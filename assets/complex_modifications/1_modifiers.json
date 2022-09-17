@@ -1,0 +1,136 @@
+{
+  "title":"1.Modifiers",
+  "rules":[
+    {
+      "description": "1. Eisu to R_Control.",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code":"japanese_eisuu",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "right_control",
+              "lazy": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "1. Kana to R_Option. (Post Enter if pressed alone)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "japanese_kana",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "right_option",
+              "lazy":true
+            }
+          ],
+          "to_if_alone": [
+            {"key_code": "return_or_enter"}
+          ]
+        }
+      ]
+    },
+    {
+      "description": "1. Spacebar to L_shift. (Post spacebar if pressed alone)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "spacebar",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_shift"
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "spacebar"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "1. Left,Right Command to Left,Right Command. (Post Left Eisu,Kana if pressed alone)",
+      "manipulators": [
+        {
+          "type":"basic",
+          "from":{
+            "key_code":"left_command",
+            "modifiers":{
+              "optional":["any"]
+            }
+          },
+          "to":[
+            {
+              "key_code":"left_command",
+              "lazy":true
+            }
+          ],
+          "to_if_alone":[
+            {
+              "key_code":"japanese_eisuu"
+            }
+          ]
+        },
+        {
+          "type":"basic",
+          "from":{
+            "key_code":"right_command",
+            "modifiers":{
+              "optional":["any"]
+            }
+          },
+          "to":[
+            {
+              "key_code":"right_command",
+              "lazy":true
+            }
+          ],
+          "to_if_alone":[
+            {
+              "key_code":"japanese_kana"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description":"1. CapsLock to Left_Control",
+      "manipulators":[
+        {
+          "type":"basic",
+          "from":{
+            "key_code":"caps_lock",
+            "modifiers":{
+              "optional":["any"]
+            }
+          },
+          "to":[
+            {
+              "key_code":"left_control"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
