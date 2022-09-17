@@ -2,8 +2,7 @@
     "global": {
         "check_for_updates_on_startup": true,
         "show_in_menu_bar": true,
-        "show_profile_name_in_menu_bar": false,
-        "unsafe_ui": false
+        "show_profile_name_in_menu_bar": true
     },
     "profiles": [
         {
@@ -29,8 +28,7 @@
                     },
                     "ignore": false,
                     "manipulate_caps_lock_led": true,
-                    "simple_modifications": [],
-                    "treat_as_built_in_keyboard": false
+                    "simple_modifications": []
                 }
             ],
             "fn_function_keys": [
@@ -178,33 +176,11 @@
                 },
                 "rules": [
                     {
-                        "description": "1. Eisu to R_Control.",
+                        "description": "Change Eisu to Right_option. (Post Eisu if pressed alone)",
                         "manipulators": [
                             {
                                 "from": {
                                     "key_code": "japanese_eisuu",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "right_control",
-                                        "lazy": true
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "1. Kana to R_Option. (Post Enter if pressed alone)",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "japanese_kana",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -219,7 +195,7 @@
                                 ],
                                 "to_if_alone": [
                                     {
-                                        "key_code": "return_or_enter"
+                                        "key_code": "japanese_eisuu"
                                     }
                                 ],
                                 "type": "basic"
@@ -227,7 +203,34 @@
                         ]
                     },
                     {
-                        "description": "1. Spacebar to L_shift. (Post spacebar if pressed alone)",
+                        "description": "Change Kana to Right_control. (Post Kana if pressed alone)",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "japanese_kana",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_control",
+                                        "lazy": true
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "japanese_kana"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Change spacebar to left_shift. (Post spacebar if pressed alone)",
                         "manipulators": [
                             {
                                 "from": {
@@ -253,84 +256,14 @@
                         ]
                     },
                     {
-                        "description": "1. Left,Right Command to Left,Right Command. (Post Left Eisu,Kana if pressed alone)",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "left_command",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_command",
-                                        "lazy": true
-                                    }
-                                ],
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "japanese_eisuu"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "right_command",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "right_command",
-                                        "lazy": true
-                                    }
-                                ],
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "japanese_kana"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "1. CapsLock to Left_Control",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "caps_lock",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_control"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "2. Eisu + J,K,I,L to Left,Down,Up,Right",
+                        "description": "R-Option + J/K/I/L to L/D/U/R",
                         "manipulators": [
                             {
                                 "from": {
                                     "key_code": "j",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_control"
+                                            "right_option"
                                         ],
                                         "optional": [
                                             "shift",
@@ -351,12 +284,11 @@
                                     "key_code": "k",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_control"
+                                            "right_option"
                                         ],
                                         "optional": [
                                             "caps_lock",
-                                            "shift",
-                                            "option"
+                                            "shift"
                                         ]
                                     }
                                 },
@@ -372,12 +304,11 @@
                                     "key_code": "i",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_control"
+                                            "right_option"
                                         ],
                                         "optional": [
                                             "caps_lock",
-                                            "shift",
-                                            "option"
+                                            "shift"
                                         ]
                                     }
                                 },
@@ -393,7 +324,7 @@
                                     "key_code": "l",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_control"
+                                            "right_option"
                                         ],
                                         "optional": [
                                             "caps_lock",
@@ -412,19 +343,18 @@
                         ]
                     },
                     {
-                        "description": "2. Eisu + U,O to Home,End (if press with Command then Top,Bottom",
+                        "description": "R-Option + U/O to Home/End",
                         "manipulators": [
                             {
                                 "from": {
                                     "key_code": "u",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_control"
+                                            "right_option"
                                         ],
                                         "optional": [
                                             "caps_lock",
-                                            "shift",
-                                            "option"
+                                            "shift"
                                         ]
                                     }
                                 },
@@ -438,38 +368,14 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "u",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_control",
-                                            "command"
-                                        ],
-                                        "optional": [
-                                            "caps_lock",
-                                            "shift",
-                                            "option"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "up_arrow",
-                                        "modifiers": "command"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
                                     "key_code": "o",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_control"
+                                            "right_option"
                                         ],
                                         "optional": [
                                             "caps_lock",
-                                            "shift",
-                                            "option"
+                                            "shift"
                                         ]
                                     }
                                 },
@@ -480,41 +386,18 @@
                                     }
                                 ],
                                 "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "o",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_control",
-                                            "command"
-                                        ],
-                                        "optional": [
-                                            "caps_lock",
-                                            "shift",
-                                            "option"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "down_arrow",
-                                        "modifiers": "command"
-                                    }
-                                ],
-                                "type": "basic"
                             }
                         ]
                     },
                     {
-                        "description": "2. Eisu +  , , M  to Scroll Down , Scroll Up",
+                        "description": "R-Option + ,/. to Scroll Down/Up",
                         "manipulators": [
                             {
                                 "from": {
                                     "key_code": "comma",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_control"
+                                            "right_option"
                                         ],
                                         "optional": [
                                             "caps_lock"
@@ -531,10 +414,10 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "m",
+                                    "key_code": "period",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_control"
+                                            "right_option"
                                         ],
                                         "optional": [
                                             "caps_lock"
@@ -552,19 +435,17 @@
                         ]
                     },
                     {
-                        "description": "2. Eisu + H,D to BackSpace,Delete",
+                        "description": "R-Option + H/D to BS/Delete",
                         "manipulators": [
                             {
                                 "from": {
                                     "key_code": "h",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_control"
+                                            "right_option"
                                         ],
                                         "optional": [
-                                            "caps_lock",
-                                            "shift",
-                                            "command"
+                                            "caps_lock"
                                         ]
                                     }
                                 },
@@ -580,13 +461,10 @@
                                     "key_code": "d",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_control"
+                                            "right_option"
                                         ],
                                         "optional": [
-                                            "caps_lock",
-                                            "shift",
-                                            "option",
-                                            "command"
+                                            "caps_lock"
                                         ]
                                     }
                                 },
@@ -601,14 +479,14 @@
                         ]
                     },
                     {
-                        "description": "3. Eisu + X,C,V to Cut,Copy,Paste",
+                        "description": "R-Option + X/C/V to Cut/Copy/Paste",
                         "manipulators": [
                             {
                                 "from": {
                                     "key_code": "x",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_control"
+                                            "right_option"
                                         ],
                                         "optional": [
                                             "caps_lock"
@@ -630,7 +508,7 @@
                                     "key_code": "c",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_control"
+                                            "right_option"
                                         ],
                                         "optional": [
                                             "caps_lock"
@@ -652,7 +530,7 @@
                                     "key_code": "v",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_control"
+                                            "right_option"
                                         ],
                                         "optional": [
                                             "caps_lock"
@@ -672,14 +550,14 @@
                         ]
                     },
                     {
-                        "description": "3. Eisu + A to Select All",
+                        "description": "R-Option + A to Select All",
                         "manipulators": [
                             {
                                 "from": {
                                     "key_code": "a",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_control"
+                                            "right_option"
                                         ],
                                         "optional": [
                                             "caps_lock"
@@ -699,14 +577,14 @@
                         ]
                     },
                     {
-                        "description": "3. Eisu + M to return",
+                        "description": "R-Option + M to return",
                         "manipulators": [
                             {
                                 "from": {
                                     "key_code": "m",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_control"
+                                            "right_option"
                                         ],
                                         "optional": [
                                             "caps_lock"
@@ -723,14 +601,14 @@
                         ]
                     },
                     {
-                        "description": "3. Eisu + E,R to Kill line , Open Line",
+                        "description": "R-Option + E to Kill line",
                         "manipulators": [
                             {
                                 "from": {
                                     "key_code": "e",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_control"
+                                            "right_option"
                                         ],
                                         "optional": [
                                             "caps_lock"
@@ -750,13 +628,18 @@
                                     }
                                 ],
                                 "type": "basic"
-                            },
+                            }
+                        ]
+                    },
+                    {
+                        "description": "R-Option R to Open Line",
+                        "manipulators": [
                             {
                                 "from": {
                                     "key_code": "r",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_control"
+                                            "right_option"
                                         ],
                                         "optional": [
                                             "caps_lock"
@@ -776,42 +659,19 @@
                                     {
                                         "key_code": "up_arrow"
                                     }
-                                ],
-                                "type": "basic"
+                                ]
                             }
                         ]
                     },
                     {
-                        "description": "3. Eisu + Z,B to Undo,Redo",
+                        "description": "R-option z/b to undo/redo",
                         "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "z",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_control"
-                                        ],
-                                        "optional": [
-                                            "caps_lock"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "z",
-                                        "modifiers": [
-                                            "command"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
                             {
                                 "from": {
                                     "key_code": "b",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_control"
+                                            "command"
                                         ],
                                         "optional": [
                                             "caps_lock"
@@ -826,342 +686,19 @@
                                             "shift"
                                         ]
                                     }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "3. Eisu + Semicolon , slash to Tab , S-Tab",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "semicolon",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_control"
-                                        ],
-                                        "optional": [
-                                            "caps_lock"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "tab"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "slash",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_control"
-                                        ],
-                                        "optional": [
-                                            "caps_lock"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "tab",
-                                        "modifiers": [
-                                            "shift"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "3. Eisu + U , Kana to left , right click ",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "u",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_control"
-                                        ],
-                                        "optional": [
-                                            "caps_lock"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "pointing_button": "button1"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "japanese_kana",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_control"
-                                        ],
-                                        "optional": [
-                                            "caps_lock"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "pointing_button": "button2"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "4.Eisu S , Q , W , T , / , N , Ctrl to Save , Quit , Close , NewTab , New , Command Tab",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "s",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_control"
-                                        ],
-                                        "optional": [
-                                            "caps_lock"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "s",
-                                        "modifiers": [
-                                            "command"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "q",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_control"
-                                        ],
-                                        "optional": [
-                                            "caps_lock"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "q",
-                                        "modifiers": [
-                                            "command"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "w",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_control"
-                                        ],
-                                        "optional": [
-                                            "caps_lock"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "w",
-                                        "modifiers": [
-                                            "command"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "t",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_control"
-                                        ],
-                                        "optional": [
-                                            "caps_lock"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "t",
-                                        "modifiers": [
-                                            "command"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "n",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_control"
-                                        ],
-                                        "optional": [
-                                            "caps_lock"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "n",
-                                        "modifiers": [
-                                            "command"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "Left_control",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_control"
-                                        ],
-                                        "optional": [
-                                            "caps_lock"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "tab",
-                                        "modifiers": [
-                                            "command"
-                                        ]
-                                    }
                                 ]
                             }
                         ]
                     },
                     {
-                        "description": "4. Eisu + F,G to Find,Replace",
+                        "description": "R_command + qwdrgjuivp to !@#$%^&*()",
                         "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "f",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_control"
-                                        ],
-                                        "optional": [
-                                            "caps_lock"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "f",
-                                        "modifiers": [
-                                            "command"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "g",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_control"
-                                        ],
-                                        "optional": [
-                                            "caps_lock"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "f",
-                                        "modifiers": [
-                                            "option",
-                                            "command"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "4. Eisu + TAB to Command + TAB",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "tab",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_control"
-                                        ],
-                                        "optional": [
-                                            "caps_lock"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "tab",
-                                        "modifiers": [
-                                            "command"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "5. Kana + tab,Q,W,E,R,T,Y,U,I,O,P,Quote to !,@,#,$,%,^,&,*,+,-,dquote",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "tab",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_option"
-                                        ],
-                                        "optional": [
-                                            "caps_lock"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "hyphen",
-                                        "modifiers": "shift"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
                             {
                                 "from": {
                                     "key_code": "q",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_option"
+                                            "right_command"
                                         ],
                                         "optional": [
                                             "caps_lock",
@@ -1172,7 +709,7 @@
                                 "to": [
                                     {
                                         "key_code": "1",
-                                        "modifiers": "shift"
+                                        "modefiers": "shift"
                                     }
                                 ],
                                 "type": "basic"
@@ -1182,7 +719,7 @@
                                     "key_code": "w",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_option"
+                                            "right_command"
                                         ],
                                         "optional": [
                                             "caps_lock",
@@ -1193,7 +730,7 @@
                                 "to": [
                                     {
                                         "key_code": "2",
-                                        "modifiers": "shift"
+                                        "modefiers": "shift"
                                     }
                                 ],
                                 "type": "basic"
@@ -1203,7 +740,7 @@
                                     "key_code": "e",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_option"
+                                            "right_command"
                                         ],
                                         "optional": [
                                             "caps_lock",
@@ -1224,7 +761,7 @@
                                     "key_code": "r",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_option"
+                                            "right_command"
                                         ],
                                         "optional": [
                                             "caps_lock",
@@ -1245,7 +782,7 @@
                                     "key_code": "t",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_option"
+                                            "right_command"
                                         ],
                                         "optional": [
                                             "caps_lock",
@@ -1266,7 +803,7 @@
                                     "key_code": "y",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_option"
+                                            "right_command"
                                         ],
                                         "optional": [
                                             "caps_lock",
@@ -1287,7 +824,7 @@
                                     "key_code": "u",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_option"
+                                            "right_command"
                                         ],
                                         "optional": [
                                             "caps_lock",
@@ -1308,7 +845,7 @@
                                     "key_code": "i",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_option"
+                                            "right_command"
                                         ],
                                         "optional": [
                                             "caps_lock",
@@ -1329,7 +866,7 @@
                                     "key_code": "o",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_option"
+                                            "right_command"
                                         ],
                                         "optional": [
                                             "caps_lock",
@@ -1339,7 +876,8 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "keypad_plus"
+                                        "key_code": "9",
+                                        "modifiers": "shift"
                                     }
                                 ],
                                 "type": "basic"
@@ -1349,7 +887,7 @@
                                     "key_code": "p",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_option"
+                                            "right_command"
                                         ],
                                         "optional": [
                                             "caps_lock",
@@ -1359,48 +897,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "hyphen"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "open_bracket",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_option"
-                                        ],
-                                        "optional": [
-                                            "caps_lock",
-                                            "shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "quote",
-                                        "modifiers": "shift"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "quote",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_option"
-                                        ],
-                                        "optional": [
-                                            "caps_lock",
-                                            "shfit"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "semicolon",
+                                        "key_code": "0",
                                         "modifiers": "shift"
                                     }
                                 ],
@@ -1409,53 +906,14 @@
                         ]
                     },
                     {
-                        "description": "5. Kana + Z,X,C,V,B,N,M,,,.,; to ≈,<,(,{,[,],},),>,?,:",
+                        "description": "R_Control + C/V/B/N/M < to (/{/[/]/}/)",
                         "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "z",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_option"
-                                        ],
-                                        "optional": [
-                                            "caps_lock"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "equal_sign"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "x",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_option"
-                                        ],
-                                        "optional": [
-                                            "caps_lock"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "comma",
-                                        "modifiers": "shift"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
                             {
                                 "from": {
                                     "key_code": "c",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_option"
+                                            "right_control"
                                         ],
                                         "optional": [
                                             "caps_lock"
@@ -1475,7 +933,7 @@
                                     "key_code": "v",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_option"
+                                            "right_control"
                                         ],
                                         "optional": [
                                             "caps_lock"
@@ -1495,7 +953,7 @@
                                     "key_code": "b",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_option"
+                                            "right_control"
                                         ],
                                         "optional": [
                                             "caps_lock"
@@ -1514,7 +972,7 @@
                                     "key_code": "n",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_option"
+                                            "right_control"
                                         ],
                                         "optional": [
                                             "caps_lock"
@@ -1533,7 +991,7 @@
                                     "key_code": "m",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_option"
+                                            "right_control"
                                         ],
                                         "optional": [
                                             "caps_lock"
@@ -1553,7 +1011,7 @@
                                     "key_code": "comma",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_option"
+                                            "right_control"
                                         ],
                                         "optional": [
                                             "caps_lock"
@@ -1567,13 +1025,18 @@
                                     }
                                 ],
                                 "type": "basic"
-                            },
+                            }
+                        ]
+                    },
+                    {
+                        "description": "R_Control + X < to =",
+                        "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "period",
+                                    "key_code": "x",
                                     "modifiers": {
-                                        "mandatory": [
-                                            "right_option"
+                                        "manadatory": [
+                                            "right_control"
                                         ],
                                         "optional": [
                                             "caps_lock"
@@ -1582,48 +1045,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "period",
-                                        "modifiers": "shift"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "slash",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_option"
-                                        ],
-                                        "optional": [
-                                            "caps_lock"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "slash",
-                                        "modifiers": "shift"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "quote",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_option"
-                                        ],
-                                        "optional": [
-                                            "caps_lock"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "semicolon",
-                                        "modifiers": "shift"
+                                        "key_code": "equal_sign"
                                     }
                                 ],
                                 "type": "basic"
@@ -1631,34 +1053,14 @@
                         ]
                     },
                     {
-                        "description": "6. Kana + L_Control,A,S,D,F,G,H,J,K,L,; to .,[1-0]",
+                        "description": "R_Command + A/S/D/F/G/H/J/K/L/; to [1-0]",
                         "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "left_control",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_option"
-                                        ],
-                                        "optional": [
-                                            "caps_lock",
-                                            "shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "period"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
                             {
                                 "from": {
                                     "key_code": "a",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_option"
+                                            "right_command"
                                         ],
                                         "optional": [
                                             "caps_lock",
@@ -1678,7 +1080,7 @@
                                     "key_code": "s",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_option"
+                                            "right_command"
                                         ],
                                         "optional": [
                                             "caps_lock",
@@ -1698,7 +1100,7 @@
                                     "key_code": "d",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_option"
+                                            "right_command"
                                         ],
                                         "optional": [
                                             "caps_lock",
@@ -1718,7 +1120,7 @@
                                     "key_code": "f",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_option"
+                                            "right_command"
                                         ],
                                         "optional": [
                                             "caps_lock",
@@ -1738,7 +1140,7 @@
                                     "key_code": "g",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_option"
+                                            "right_command"
                                         ],
                                         "optional": [
                                             "caps_lock",
@@ -1758,7 +1160,7 @@
                                     "key_code": "h",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_option"
+                                            "right_command"
                                         ],
                                         "optional": [
                                             "caps_lock",
@@ -1778,7 +1180,7 @@
                                     "key_code": "j",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_option"
+                                            "right_command"
                                         ],
                                         "optional": [
                                             "caps_lock",
@@ -1798,7 +1200,7 @@
                                     "key_code": "k",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_option"
+                                            "right_command"
                                         ],
                                         "optional": [
                                             "caps_lock",
@@ -1818,7 +1220,7 @@
                                     "key_code": "l",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_option"
+                                            "right_command"
                                         ],
                                         "optional": [
                                             "caps_lock",
@@ -1838,7 +1240,7 @@
                                     "key_code": "semicolon",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_option"
+                                            "right_command"
                                         ],
                                         "optional": [
                                             "caps_lock",
@@ -1856,25 +1258,8 @@
                         ]
                     },
                     {
-                        "description": "7. Nobix Layout ",
+                        "description": "Nobix Layout",
                         "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "tab",
-                                    "modifiers": {
-                                        "optional": [
-                                            "shift",
-                                            "caps_lock"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "grave_accent_and_tilde"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
                             {
                                 "from": {
                                     "key_code": "e",
@@ -1956,23 +1341,6 @@
                                 "to": [
                                     {
                                         "key_code": "quote"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "left_control",
-                                    "modifiers": {
-                                        "optional": [
-                                            "shift",
-                                            "caps_lock"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "tab"
                                     }
                                 ],
                                 "type": "basic"
@@ -2132,17 +1500,6 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "left_shift"
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "escape"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
                                     "key_code": "x",
                                     "modifiers": {
                                         "optional": [
@@ -2210,30 +1567,6 @@
                                 "type": "basic"
                             }
                         ]
-                    },
-                    {
-                        "description": "8. Eisu + spacebar to open Alfred app",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "spacebar",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_control"
-                                        ],
-                                        "optional": [
-                                            "caps_lock"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -a 'Alfred 4.app'"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
                     }
                 ]
             },
@@ -2249,22 +1582,7 @@
                     },
                     "ignore": false,
                     "manipulate_caps_lock_led": true,
-                    "simple_modifications": [],
-                    "treat_as_built_in_keyboard": false
-                },
-                {
-                    "disable_built_in_keyboard_if_exists": false,
-                    "fn_function_keys": [],
-                    "identifiers": {
-                        "is_keyboard": false,
-                        "is_pointing_device": true,
-                        "product_id": 834,
-                        "vendor_id": 1452
-                    },
-                    "ignore": true,
-                    "manipulate_caps_lock_led": false,
-                    "simple_modifications": [],
-                    "treat_as_built_in_keyboard": false
+                    "simple_modifications": []
                 }
             ],
             "fn_function_keys": [
