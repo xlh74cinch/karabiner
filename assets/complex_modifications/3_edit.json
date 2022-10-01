@@ -76,26 +76,6 @@
       ]
     },
     {
-      "description":"3. Eisu + M to return",
-      "manipulators":[
-        {
-          "type":"basic",
-          "from":{
-            "key_code":"m",
-            "modifiers":{
-              "mandatory":["right_control"],
-              "optional":["caps_lock"]
-            }
-          },
-          "to":[
-            {
-              "key_code":"return_or_enter"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "description":"3. Eisu + E,R to Kill line , Open Line",
       "manipulators":[
         {
